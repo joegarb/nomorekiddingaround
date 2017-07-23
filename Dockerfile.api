@@ -1,0 +1,3 @@
+FROM node:4-onbuild
+ENV API_PORT 8000
+EXPOSE $API_PORT

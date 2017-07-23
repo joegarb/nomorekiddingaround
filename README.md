@@ -10,4 +10,4 @@ A wedding announcement and RSVP website
     npm install
 
 ## Run Development Server
-    npm start
+    npm run dev
