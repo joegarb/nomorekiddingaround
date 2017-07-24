@@ -43,7 +43,9 @@ logger.stream = {
     }
 };
 
+app.enable('trust proxy');
 app.use(morgan(':remote-addr :method :url :status :res[content-length] - :response-time ms', {'stream': logger.stream}));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
