@@ -1,6 +1,6 @@
 # nomorekiddingaround
 
-A wedding announcement and RSVP website
+A wedding RSVP website built on the MEAN stack
 
 ---
 
