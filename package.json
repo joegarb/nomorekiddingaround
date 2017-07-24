@@ -13,7 +13,7 @@
   },
   "homepage": "https://github.com/joegarb/nomorekiddingaround#readme",
   "scripts": {
-    "dev": "gulp dev & nodemon --ignore 'dist' server.js",
+    "dev": "gulp dev & nodemon --ignore 'src' --ignore 'dist' server.js",
     "build": "gulp build"
   },
   "main": "server.js",
