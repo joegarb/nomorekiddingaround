@@ -1,6 +1,6 @@
 'use strict';
 
-const port = process.env.API_PORT || 8080;
+const port = process.env.API_PORT || 8000;
 const mongoUrl = process.env.MONGO_URL;
 
 const express = require('express');
