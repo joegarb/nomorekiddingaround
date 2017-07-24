@@ -19,7 +19,7 @@ var logger = new winston.Logger({
             handleExceptions: true,
             json: true,
             maxsize: 5242880, // 5MB
-            maxFiles: 5,
+            maxFiles: 1,
             colorize: false,
             timestamp: () => {
                 return moment().format();
