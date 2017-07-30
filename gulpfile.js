@@ -10,7 +10,6 @@ var htmlmin = require('gulp-htmlmin');
 var eslint = require('gulp-eslint');
 var cleanCSS = require('gulp-clean-css');
 var inlineSource = require('gulp-inline-source');
-var browserSync = require('browser-sync').create();
 var modRewrite  = require('connect-modrewrite');
 var rev = require('gulp-rev');
 var revReplace = require('gulp-rev-replace');
@@ -111,28 +110,8 @@ gulp.task('inline', function() {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('init-browser-sync', function() {
-  browserSync.init({
-    server: {
-      baseDir: './dist',
-      middleware: [
-        // Mimic the rewrite rule in our .htaccess since that isn't used when the app is served up by browser-sync. Necessary for Angular HTML5 mode.
-        modRewrite([
-          '!\\.\\w+$ /index.html [L]'
-        ])
-      ]
-    }
-  })
-});
-
-gulp.task('browser-sync-reload', function() {
-  browserSync.reload();
-});
-
 gulp.task('watch', function() {
-  gulp.watch('./src/**/*.*').on('change', function() {
-    runSequence('build:dev', 'browser-sync-reload');
-  });
+  gulp.watch('./src/**/*.*', ['build:dev']);
 });
 
 gulp.task('dev', function(callback) {
@@ -140,7 +119,6 @@ gulp.task('dev', function(callback) {
     'clean',
     'lint',
     'build:dev',
-    'init-browser-sync',
     'watch',
     callback
   );

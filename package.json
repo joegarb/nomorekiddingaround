@@ -1,7 +1,6 @@
 {
   "name": "nomorekiddingaround",
   "version": "0.0.1",
-  "description": "A wedding announcement and RSVP website",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joegarb/nomorekiddingaround.git"
@@ -13,9 +12,9 @@
   },
   "homepage": "https://github.com/joegarb/nomorekiddingaround#readme",
   "scripts": {
-    "start": "node -r dotenv/config server.js",
     "dev": "gulp dev & nodemon --exec 'node -r dotenv/config' --ignore 'src' --ignore 'dist' server.js",
-    "build": "gulp build"
+    "build": "gulp build",
+    "start": "node -r dotenv/config server.js"
   },
   "main": "server.js",
   "dependencies": {
@@ -31,7 +30,6 @@
     "angular": "^1.5.8",
     "angular-css": "^1.0.8",
     "angular-route": "^1.5.8",
-    "browser-sync": "^2.18.6",
     "connect-modrewrite": "^0.9.0",
     "del": "^2.2.1",
     "eslint-config-google": "^0.6.0",

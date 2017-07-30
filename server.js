@@ -39,12 +39,15 @@ var logger = new winston.Logger({
 });
 logger.stream = {
     write: (message, encoding) => {
-        logger.info(message);
+        // Using substring to remove extra line break added by morgan since one is also added by winston
+        logger.info(message.substring(0, message.lastIndexOf('\n')));
     }
 };
 
 app.enable('trust proxy');
 app.use(morgan(':remote-addr :method :url :status :res[content-length] - :response-time ms', {'stream': logger.stream}));
+
+app.use(express.static('dist'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -59,7 +62,7 @@ mongo.connect(mongoUrl, (err, database) => {
     }
 });
 
-app.get('/rsvp', (req, res) => {
+app.get('/api/rsvp', (req, res) => {
     db.collection('rsvp').find().toArray((err, results) => {
         if (err) {
             logger.error(err);
@@ -70,7 +73,7 @@ app.get('/rsvp', (req, res) => {
     });
 });
 
-app.post('/rsvp', (req, res) => {
+app.post('/api/rsvp', (req, res) => {
     logger.info('POST /rsvp', req.body);
     db.collection('rsvp').save(req.body, (err, result) => {
         if (err) {
@@ -80,6 +83,10 @@ app.post('/rsvp', (req, res) => {
             res.send(result);
         }
     });
+});
+
+app.get('/*', function(req, res){
+    res.sendFile(__dirname + '/dist/index.html');
 });
 
 app.listen(port, () => {
