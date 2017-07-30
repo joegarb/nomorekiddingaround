@@ -1,4 +1,4 @@
-#rsvp-container {
+.rsvp-container {
 	margin: auto;
 	position: absolute;
 	top: 0;
@@ -8,4 +8,8 @@
 	height: 250px;
 	width: 250px;
 	white-space: nowrap;
+}
+
+.number-of-guests {
+	width: 50px;
 }
