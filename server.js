@@ -75,6 +75,7 @@ app.get('/api/rsvp', (req, res) => {
 
 app.post('/api/rsvp', (req, res) => {
     logger.info('POST /rsvp', req.body);
+    req.body.dateAdded = moment().format();
     db.collection('rsvp').save(req.body, (err, result) => {
         if (err) {
             logger.error(err);
