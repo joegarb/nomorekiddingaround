@@ -30,6 +30,7 @@
     "angular": "^1.5.8",
     "angular-css": "^1.0.8",
     "angular-route": "^1.5.8",
+    "browser-sync": "^2.18.13",
     "connect-modrewrite": "^0.9.0",
     "del": "^2.2.1",
     "eslint-config-google": "^0.6.0",

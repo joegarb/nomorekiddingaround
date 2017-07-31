@@ -10,6 +10,7 @@ var htmlmin = require('gulp-htmlmin');
 var eslint = require('gulp-eslint');
 var cleanCSS = require('gulp-clean-css');
 var inlineSource = require('gulp-inline-source');
+var browserSync = require('browser-sync').create();
 var modRewrite  = require('connect-modrewrite');
 var rev = require('gulp-rev');
 var revReplace = require('gulp-rev-replace');
@@ -110,8 +111,23 @@ gulp.task('inline', function() {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('init-browser-sync', function() {
+  browserSync.init({
+    files: './dist/**/*',
+    port: 8001,
+    // Point browser-sync at our node express server
+    proxy: 'http://localhost:8000'
+  })
+});
+
+gulp.task('browser-sync-reload', function() {
+  browserSync.reload();
+});
+
 gulp.task('watch', function() {
-  gulp.watch('./src/**/*.*', ['build:dev']);
+  gulp.watch('./src/**/*.*').on('change', function() {
+    runSequence('build:dev', 'browser-sync-reload');
+  });
 });
 
 gulp.task('dev', function(callback) {
@@ -119,6 +135,7 @@ gulp.task('dev', function(callback) {
     'clean',
     'lint',
     'build:dev',
+    'init-browser-sync',
     'watch',
     callback
   );
