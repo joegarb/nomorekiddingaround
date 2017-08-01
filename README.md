@@ -1,6 +1,6 @@
 # nomorekiddingaround
 
-A wedding RSVP website built on the MEAN stack
+A wedding RSVP web app built on the Angular 1 MEAN stack
 
 ---
 
