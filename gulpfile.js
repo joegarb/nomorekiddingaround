@@ -20,7 +20,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('lint', function() {
-  return gulp.src(['src/**/*.js'])
+  return gulp.src(['client/**/*.js'])
     .pipe(eslint())
     .pipe(eslint.format());
 });
@@ -29,7 +29,7 @@ gulp.task('lint', function() {
 gulp.task('fastbuild:js', function() {
   // Bundle JS files
   return gulp.src([
-    'src/index.js'
+    'client/index.js'
   ]).pipe(browserify())
     .pipe(concat('bundle.js'))
     .pipe(gulp.dest('dist'));
@@ -38,7 +38,7 @@ gulp.task('fastbuild:js', function() {
 gulp.task('build:js', function() {
   // Bundle JS files
   return gulp.src([
-    'src/index.js'
+    'client/index.js'
   ]).pipe(browserify())
     .pipe(uglify())
     .pipe(concat('bundle.js'))
@@ -49,56 +49,56 @@ gulp.task('build:js', function() {
 gulp.task('fastbuild:static', function() {
   // Copy images
   gulp.src([
-    'src/**/*.{png,jpg}'
+    'client/**/*.{png,jpg}'
   ]).pipe(gulp.dest('dist'));
 
   // Copy html
-  gulp.src('src/**/*.html')
+  gulp.src('client/**/*.html')
     .pipe(gulp.dest('dist'));
 
   // Copy css that can't be bundled
-  gulp.src('src/components/**/*.css')
+  gulp.src('client/components/**/*.css')
     .pipe(gulp.dest('dist/components'));
-  gulp.src('src/shared/styles/unbundled/*.css')
+  gulp.src('client/shared/styles/unbundled/*.css')
     .pipe(gulp.dest('dist/shared/styles/unbundled'));
 
   // Bundle and copy the main css
-  return gulp.src('src/shared/styles/*.css')
+  return gulp.src('client/shared/styles/*.css')
     .pipe(concat('bundle.css'))
     .pipe(gulp.dest('dist/shared/styles'));
 });
 
 gulp.task('build:static', function() {
   // Copy the .htaccess
-  gulp.src('src/.htaccess')
+  gulp.src('client/.htaccess')
     .pipe(gulp.dest('dist'));
 
   // Copy sitemap.xml and robots.txt
   gulp.src([
-    'src/*.xml',
-    'src/*.txt'
+    'client/*.xml',
+    'client/*.txt'
   ]).pipe(gulp.dest('dist'));
 
   // Copy images
   gulp.src([
-    'src/**/*.{png,jpg}'
+    'client/**/*.{png,jpg}'
   ]).pipe(gulp.dest('dist'));
 
   // Minify html
-  gulp.src('src/**/*.html')
+  gulp.src('client/**/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('dist'));
 
   // Minify css that can't be bundled
-  gulp.src('src/components/**/*.css')
+  gulp.src('client/components/**/*.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('dist/components'));
-  gulp.src('src/shared/styles/unbundled/*.css')
+  gulp.src('client/shared/styles/unbundled/*.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('dist/shared/styles/unbundled'));
 
   // Bundle and minify the main css
-  return gulp.src('src/shared/styles/*.css')
+  return gulp.src('client/shared/styles/*.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(concat('bundle.css'))
     .pipe(gulp.dest('dist/shared/styles'));
@@ -125,7 +125,7 @@ gulp.task('browser-sync-reload', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./src/**/*.*').on('change', function() {
+  gulp.watch('./client/**/*.*').on('change', function() {
     runSequence('build:dev', 'browser-sync-reload');
   });
 });

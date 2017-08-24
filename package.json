@@ -12,7 +12,7 @@
   },
   "homepage": "https://github.com/joegarb/nomorekiddingaround#readme",
   "scripts": {
-    "dev": "gulp dev & nodemon --exec 'node -r dotenv/config' --ignore 'src' --ignore 'dist' server.js",
+    "dev": "gulp dev & nodemon --exec 'node -r dotenv/config' --ignore 'client' --ignore 'dist' server.js",
     "build": "gulp build",
     "start": "node -r dotenv/config server.js"
   },
