@@ -3,7 +3,6 @@
 const gulp = require('gulp');
 const runSequence = require('run-sequence');
 const browserSync = require('browser-sync').create();
-const modRewrite = require('connect-modrewrite');
 
 gulp.task('dev', ['build-dev'], () => {
     browserSync.init({
