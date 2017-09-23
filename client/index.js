@@ -12,7 +12,6 @@ require('angular').module(
                 '/rsvp',
                 {
                     templateUrl: 'components/rsvp/rsvp.html',
-                    controller: 'RsvpController',
                     css: 'components/rsvp/rsvp.css'
                 }
             );
