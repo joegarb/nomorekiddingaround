@@ -1,13 +1,13 @@
 # nomorekiddingaround
 
-A wedding RSVP web app built on the Angular 1 MEAN stack
+A wedding RSVP web app built on the AngularJS 1 MEAN stack
 
 ---
 
 ## Requirements
 
-- node
-- npm
+- node 6.x or greater
+- npm 5.x or greater
 
 ## Setup
 
