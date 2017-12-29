@@ -1,0 +1,33 @@
+.main-container {
+    margin-top: 40px;
+}
+
+/* The elements are positioned vertically and with extra vertical spacing on smaller screens */
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.view-container {
+    margin: 0 auto;
+    display: table;
+}
+
+/*
+ * Tablet size (and up) styles
+ * The elements are positioned next to one another
+ */
+@media (min-width: 48em) {
+    /* Right align the logo */
+    .logo-container {
+        text-align: right;
+        margin-bottom: 0;
+    }
+
+    /* Left align the view */
+    .view-container {
+        margin: 0;
+        display: initial;
+    }
+}

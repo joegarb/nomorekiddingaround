@@ -1,5 +1,5 @@
 <div ng-controller="RsvpController as ctrl" class="rsvp-container">
-    <form name="rsvpForm" ng-submit="ctrl.submit(rsvpForm.$valid)" novalidate>
+    <form name="rsvpForm" class="pure-form" ng-submit="ctrl.submit(rsvpForm.$valid)" novalidate>
         <h3>RSVP</h3>
         <p>
             <label>
@@ -8,24 +8,24 @@
             </label>
         </p>
         <p>
-            Will you be able to attend?
+            Will you be able to attend?&nbsp;
             <label>
                 <input type="radio" ng-model="ctrl.model.isAttending" ng-value="true" name="isAttending" required/>
-                Yes
+                Yes&nbsp;
             </label>
             <label>
                 <input type="radio" ng-model="ctrl.model.isAttending" ng-value="false" name="isAttending" required/>
                 No
             </label>
         </p>
-        <p ng-show="ctrl.model.isAttending">
+        <p>
             <label>
                 Number of guests:
-                <input type="number" ng-model="ctrl.model.numberOfGuests" ng-required="ctrl.model.isAttending" min="0" max="9" name="numberOfGuests" class="number-of-guests"/>
+                <input type="number" ng-model="ctrl.model.numberOfGuests" ng-disabled="!ctrl.model.isAttending" ng-required="ctrl.model.isAttending" min="0" max="9" name="numberOfGuests" class="number-of-guests"/>
             </label>
         </p>
         <p>
-            <button type="submit" ng-disabled="rsvpForm.$invalid || ctrl.saving || ctrl.saved">Submit</button>
+            <button type="submit" class="pure-button" ng-disabled="rsvpForm.$invalid || ctrl.saving || ctrl.saved">Submit</button>
         </p>
         <p>
             <span ng-show="ctrl.saved">Your response has been recorded!</span>

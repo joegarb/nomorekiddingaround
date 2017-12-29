@@ -6,18 +6,14 @@
     <base href="/">
     <title>#nomorekiddingaround</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
 
     <!--[if lte IE 8]>
-    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-old-ie-min.css">
-    <![endif]-->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+        <![endif]-->
     <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
     <!--<![endif]-->
-
-    <!--[if lt IE 9]>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
-    <![endif]-->
 
     <link rel="stylesheet" href="shared/styles/bundle.css" inline>
     <script src="bundle.js" inline></script>
@@ -25,7 +21,19 @@
 
 <body>
 
-<div ng-view>
+<div class="pure-g main-container">
+    <div class="pure-u-0 pure-u-md-2-24">
+    </div>
+    <div class="pure-u-1 pure-u-md-9-24 logo-container">
+        <img src="shared/images/logo.jpg" />
+    </div>
+    <div class="pure-u-1 pure-u-md-2-24">
+    </div>
+    <div class="pure-u-1 pure-u-md-9-24">
+        <div ng-view class="view-container"></div>
+    </div>
+    <div class="pure-u-0 pure-u-md-2-24">
+    </div>
 </div>
 
 </body>
