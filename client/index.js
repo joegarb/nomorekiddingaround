@@ -16,6 +16,13 @@ require('angular').module(
                 }
             );
 
+            $routeProvider.when(
+                '/rsvp-list',
+                {
+                    templateUrl: 'components/rsvp-list/rsvp-list.html'
+                }
+            );
+
             $routeProvider.otherwise(
                 {
                     redirectTo: '/rsvp'

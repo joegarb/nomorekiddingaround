@@ -1,22 +1,22 @@
 'use strict';
 
 module.exports = function($http) {
-    var ctrl = this;
-    ctrl.model = {numberOfGuests: 0};
+    var vm = this;
+    vm.model = {numberOfGuests: 0};
 
-    ctrl.submit = function() {
-        ctrl.saving = true;
+    vm.submit = function() {
+        vm.saving = true;
         $http({
             url: '/api/rsvp',
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            data: ctrl.model
+            data: vm.model
         }).then(function success(response) {
-            ctrl.saved = true;
+            vm.saved = true;
         }, function error(response) {
-            ctrl.error = true;
+            vm.error = true;
         }).finally(function() {
-            ctrl.saving = false;
+            vm.saving = false;
         });
     };
 };

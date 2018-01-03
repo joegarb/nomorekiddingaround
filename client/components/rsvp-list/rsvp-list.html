@@ -1,0 +1,26 @@
+<div ng-controller="RsvpListController as vm">
+    <div ng-if="vm.loading">
+        Loading...
+        <i class="fa fa-spinner fa-pulse fa-fw"></i>
+    </div>
+    <div ng-if="!vm.loading">
+        <table class="pure-table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Attending?</th>
+                <th>Number of Guests</th>
+                <th>Date Submitted</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="rsvp in vm.list">
+                <td>{{rsvp.name}}</td>
+                <td>{{rsvp.isAttending}}</td>
+                <td>{{rsvp.numberOfGuests}}</td>
+                <td>{{rsvp.dateAdded}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
