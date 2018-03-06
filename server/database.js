@@ -1,6 +1,7 @@
 'use strict';
 
 const mongoUrl = process.env.MONGO_URL;
+const databaseName = process.env.MONGO_DB;
 const mongo = require('mongodb').MongoClient;
 const logger = require('./logger');
 
@@ -13,7 +14,7 @@ module.exports = {
                 if (err) {
                     reject(err);
                 } else {
-                    resolve(database);
+                    resolve(database.db(databaseName));
                 }
             });
         });
