@@ -3,7 +3,7 @@
 require('angular').module(
     'nomorekiddingaround',
     [
-        'ngRoute', 'angularCSS',
+        'ngRoute', 'angularCSS', 'ui.bootstrap',
         'nomorekiddingaround.controllers'
     ],
     ['$routeProvider', '$locationProvider',

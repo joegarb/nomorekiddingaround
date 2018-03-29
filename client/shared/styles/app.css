@@ -29,7 +29,7 @@ body {
     margin: 0 auto;
     left: 0;
     right: 0;
-    top: 30px;
+    top: 60px;
 }
 
 .styled-tabs .nav-tabs {
@@ -72,11 +72,10 @@ body {
 }
 
 .styled-tabs .tab-content {
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 .styled-tabs .nav {
-    padding-bottom: 40px;
     text-align: center;
 }
 
