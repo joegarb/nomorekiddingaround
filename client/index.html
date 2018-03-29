@@ -1,20 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" ng-app="nomorekiddingaround">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <base href="/">
     <title>#nomorekiddingaround</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
-
-    <!--[if lte IE 8]>
-        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
-        <![endif]-->
-    <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
-    <!--<![endif]-->
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://use.fontawesome.com/6e0e5cc21c.js" async></script>
 
     <link rel="stylesheet" href="shared/styles/bundle.css" inline>
@@ -23,20 +15,21 @@
 
 <body>
 
-<div class="pure-g main-container">
-    <div class="pure-u-0 pure-u-md-2-24">
-    </div>
-    <div class="pure-u-1 pure-u-md-9-24 logo-container">
-        <img src="shared/images/logo.jpg" />
-    </div>
-    <div class="pure-u-1 pure-u-md-2-24">
-    </div>
-    <div class="pure-u-1 pure-u-md-9-24">
-        <div ng-view class="view-container"></div>
-    </div>
-    <div class="pure-u-0 pure-u-md-2-24">
-    </div>
-</div>
+<nav class="site-header nav nav-pills justify-content-center">
+    <a class="nav-link" href="/">Home</a>
+    <a class="nav-link" href="/our-story">Our Story</a>
+    <a class="nav-link" href="/our-entourage">Our Entourage</a>
+    <a class="nav-link" href="/the-wedding">The Wedding</a>
+    <a class="nav-link" href="/travel-and-lodging">Travel & Lodging</a>
+    <a class="nav-link" href="/things-to-do">Things To Do</a>
+    <a class="nav-link" href="/registry">Registry</a>
+</nav>
+
+<ng-view></ng-view>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 </html>

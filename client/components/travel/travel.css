@@ -1,4 +1,4 @@
-.rsvp-cover-photo {
+.travel-cover-photo {
     background:
         linear-gradient(
             to top,
@@ -18,7 +18,7 @@
     height: 300px;
 }
 
-.rsvp-content {
+.travel-content {
     position: absolute;
     top: 300px;
 }

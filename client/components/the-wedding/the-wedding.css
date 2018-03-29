@@ -1,0 +1,30 @@
+.the-wedding {
+    margin-top: 300px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.the-wedding-cover-photo {
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.3)
+    ),
+    url("/components/home/home-cover-photo.jpg");
+    transition: background-image 0.8s ease-in-out;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 300px;
+}
+
+.the-wedding-content {
+    position: absolute;
+    top: 300px;
+    width: 100%;
+}

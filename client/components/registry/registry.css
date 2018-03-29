@@ -1,4 +1,4 @@
-.rsvp-cover-photo {
+.registry-cover-photo {
     background:
         linear-gradient(
             to top,
@@ -18,7 +18,15 @@
     height: 300px;
 }
 
-.rsvp-content {
+.registry-content {
     position: absolute;
     top: 300px;
+}
+
+.registry-sites {
+    margin: 0 2em;
+}
+
+.registry-sites > li {
+    margin: 1em 0;
 }

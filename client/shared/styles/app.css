@@ -1,34 +1,112 @@
-.main-container {
-    margin-top: 40px;
-    margin-bottom: 40px;
+body {
+    font-family: athelas, serif;
+    font-style: normal;
+    font-weight: 400;
 }
 
-/* The elements are positioned vertically and with extra vertical spacing on smaller screens */
-
-.logo-container {
-    text-align: center;
-    margin-bottom: 40px;
+.site-header {
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    margin: 15px 0;
+}
+.site-header a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-transform: uppercase;
+}
+.site-header a:hover {
+    text-decoration: underline;
 }
 
-.view-container {
+.page-content {
+    padding: 2em;
+}
+
+.styled-tabs .liner {
+    height: 1px;
+    background: #ddd;
+    position: absolute;
     margin: 0 auto;
-    display: table;
+    left: 0;
+    right: 0;
+    top: 30px;
 }
 
-/*
- * Tablet size (and up) styles
- * The elements are positioned next to one another
- */
-@media (min-width: 48em) {
-    /* Right align the logo */
-    .logo-container {
-        text-align: right;
-        margin-bottom: 0;
-    }
+.styled-tabs .nav-tabs {
+    border: none;
+    position: relative;
+}
 
-    /* Left align the view */
-    .view-container {
-        margin: 0;
-        display: initial;
-    }
+.styled-tabs .tab-icon {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    border-radius: 50px;
+    background: #fff;
+    border: 1px solid #000;
+    z-index: 2;
+    text-align: center;
+}
+
+.styled-tabs .tab-icon i {
+    color: #000;
+}
+
+.styled-tabs .tab-icon:hover {
+    color: #000;
+    border: 1px solid #333;
+}
+
+.styled-tabs .active .tab-icon {
+    background: #000;
+}
+
+.styled-tabs .tab-label {
+    display: block;
+    padding-top: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.styled-tabs .tab-content {
+    padding-top: 40px;
+}
+
+.styled-tabs .nav {
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.styled-tabs .nav-item {
+    position: relative;
+    float: none;
+    display: inline-block;
+    margin-left: 3.5rem !important;
+    margin-right: 3.5rem !important;
+    margin-bottom: 0 !important;
+}
+
+.styled-tabs .nav-item a {
+    margin: 20px auto;
+    padding: 0;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: #000;
+}
+
+.styled-tabs .nav-item a.active {
+    background: none;
+}
+
+.styled-tabs .nav-item a:hover {
+    background: transparent;
+}
+
+.styled-tabs ul {
+    display: flex;
+    justify-content: center;
 }
