@@ -8,3 +8,23 @@
     top: 300px;
     width: 100%;
 }
+
+/* Reposition the line that the tab circles sit on for smaller screens where they break onto separate lines */
+.the-wedding .tab-line {
+    top: 12.5em;
+}
+.the-wedding .styled-tabs .tab-content {
+    margin-top: 3em;
+}
+@media (min-width: 30em) {
+    .the-wedding .tab-line {
+        display: block;
+        top: 5.5em;
+    }
+    .the-wedding .nav-tabs {
+        flex-wrap: nowrap;
+    }
+    .the-wedding .styled-tabs .tab-content {
+        margin-top: 2em;
+    }
+}

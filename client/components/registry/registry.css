@@ -9,7 +9,13 @@
 }
 
 .registry-sites {
-    margin: 0 2em;
+    margin: 0;
+}
+@media (min-width: 48em) {
+    /* A bit of space to either side of the bulleted list on tablets and larger */
+    .registry-sites {
+        margin: 0 2em;
+    }
 }
 
 .registry-sites > li {
