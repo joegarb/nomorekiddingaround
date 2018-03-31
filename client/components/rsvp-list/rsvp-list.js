@@ -3,6 +3,9 @@
 module.exports = function($http) {
     var vm = this;
 
+    /**
+     * Load the list of rsvp entries from the database
+     */
     function load() {
         vm.loading = true;
         $http({

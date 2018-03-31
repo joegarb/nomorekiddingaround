@@ -1,5 +1,5 @@
 'use strict';
 
-module.exports = function($http, $location) {
+module.exports = function() {
 
 };
