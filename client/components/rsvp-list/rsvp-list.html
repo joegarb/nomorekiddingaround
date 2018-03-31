@@ -1,26 +1,31 @@
-<div ng-controller="RsvpListController as vm">
-    <div ng-if="vm.loading">
-        Loading...
-        <i class="fa fa-spinner fa-pulse fa-fw"></i>
-    </div>
-    <div ng-if="!vm.loading">
-        <table class="pure-table">
-            <thead>
-            <tr>
-                <th>Name</th>
-                <th>Attending?</th>
-                <th>Number of Guests</th>
-                <th>Date Submitted</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr ng-repeat="rsvp in vm.list">
-                <td>{{rsvp.name}}</td>
-                <td>{{rsvp.isAttending}}</td>
-                <td>{{rsvp.numberOfGuests}}</td>
-                <td>{{rsvp.dateAdded}}</td>
-            </tr>
-            </tbody>
-        </table>
+<div ng-controller="RsvpListController as vm" class="page rsvp-list">
+    <div class="cover-photo rsvp-list-cover-photo"></div>
+    <div class="page-content rsvp-list-content d-flex">
+        <div class="mx-auto">
+            <div ng-if="vm.loading">
+                Loading...
+                <i class="fa fa-spinner fa-pulse fa-fw"></i>
+            </div>
+            <div ng-if="!vm.loading">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Attending?</th>
+                        <th>Number of Guests</th>
+                        <th>Date Submitted</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="rsvp in vm.list">
+                        <td>{{rsvp.name}}</td>
+                        <td>{{rsvp.isAttending}}</td>
+                        <td>{{rsvp.numberOfGuests}}</td>
+                        <td>{{rsvp.dateAdded}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </div>

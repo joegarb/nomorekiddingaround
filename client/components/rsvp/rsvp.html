@@ -1,35 +1,53 @@
-<div ng-controller="RsvpController as vm" class="rsvp-container">
-    <form name="rsvpForm" class="pure-form" ng-submit="vm.submit(rsvpForm.$valid)" novalidate>
-        <h3>RSVP</h3>
-        <p>
-            <label>
-                Name:
-                <input type="text" ng-model="vm.model.name" name="name" required/>
-            </label>
-        </p>
-        <p>
-            Will you be able to attend?&nbsp;
-            <label>
-                <input type="radio" ng-model="vm.model.isAttending" ng-value="true" name="isAttending" required/>
-                Yes&nbsp;
-            </label>
-            <label>
-                <input type="radio" ng-model="vm.model.isAttending" ng-value="false" name="isAttending" required/>
-                No
-            </label>
-        </p>
-        <p>
-            <label>
-                Number of guests:
-                <input type="number" ng-model="vm.model.numberOfGuests" ng-disabled="!vm.model.isAttending" ng-required="vm.model.isAttending" min="0" max="9" name="numberOfGuests" class="number-of-guests"/>
-            </label>
-        </p>
-        <p>
-            <button type="submit" class="pure-button" ng-disabled="rsvpForm.$invalid || vm.saving || vm.saved">Submit</button>
-        </p>
-        <p>
-            <span ng-show="vm.saved">Your response has been recorded!</span>
-            <span ng-show="!vm.saving && !vm.saved && vm.error">An error occurred while saving, please try again later.</span>
-        </p>
-    </form>
+<div ng-controller="RsvpController as vm" class="page rsvp">
+    <div class="cover-photo rsvp-cover-photo"></div>
+    <div class="page-content rsvp-content">
+        <div class="row">
+            <form name="rsvpForm" class="mx-auto col-md-8 col-sm-10 col-xs-12" ng-submit="vm.submit(rsvpForm.$valid)" novalidate>
+                <div class="form-group row">
+                    <label for="rsvpName" class="col-md-4 col-form-label">Name</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="rsvpName" placeholder="Name"
+                               ng-model="vm.model.name" name="name" required>
+                    </div>
+                </div>
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-md-4 pt-0">Will you be able to attend?</legend>
+                        <div class="col-md-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="isAttending" id="isAttending1" ng-model="vm.model.isAttending" ng-value="true" checked required>
+                                <label class="form-check-label" for="isAttending1">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="isAttending" id="isAttending2" ng-model="vm.model.isAttending" ng-value="false" required>
+                                <label class="form-check-label" for="isAttending2">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="form-group row">
+                    <label for="numberOfGuests" class="col-md-4 col-form-label">Number of guests</label>
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" id="numberOfGuests"
+                               ng-model="vm.model.numberOfGuests" ng-disabled="!vm.model.isAttending" ng-required="vm.model.isAttending" min="0" max="9" name="numberOfGuests" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-10">
+                        <button type="submit" class="btn btn-primary" ng-disabled="rsvpForm.$invalid || vm.saving || vm.saved">Submit</button>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-10">
+                        <span ng-show="vm.saved">Your response has been recorded!</span>
+                        <span ng-show="!vm.saving && !vm.saved && vm.error">An error occurred while saving, please try again later.</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>

@@ -1,0 +1,21 @@
+.registry-cover-photo {
+    background-image: url("/components/home/home-cover-photo.jpg");
+    height: 300px;
+}
+
+.registry-content {
+    position: absolute;
+    top: 300px;
+}
+
+.registry-sites {
+    margin: 0 2em;
+}
+
+.registry-sites > li {
+    margin-bottom: 1em;
+}
+
+.registry-site-name {
+    font-size: larger;
+}

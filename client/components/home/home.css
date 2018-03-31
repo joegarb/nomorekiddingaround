@@ -1,0 +1,30 @@
+body {
+    /* To prevent a scrollbar showing while the animation is happening, and then the scrollbar going away after,
+       which caused the page to appear to "jump" and was jarring */
+    overflow:hidden;
+}
+
+.home-cover-photo {
+    background-image: url("/components/home/home-cover-photo.jpg");
+    bottom: 0;
+}
+
+@keyframes slideUpFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.home-content {
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2em;
+    text-align: center;
+    animation: 2s slideUpFromBottom;
+}

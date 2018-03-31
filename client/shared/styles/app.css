@@ -1,34 +1,156 @@
-.main-container {
-    margin-top: 40px;
-    margin-bottom: 40px;
+body {
+    font-family: athelas, serif;
+    font-style: normal;
+    font-weight: 400;
 }
 
-/* The elements are positioned vertically and with extra vertical spacing on smaller screens */
+.site-header {
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    padding: 15px 0;
+    /*background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.3)
+    )*/
+}
+.site-header a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-transform: uppercase;
+}
+.site-header a:hover {
+    text-decoration: underline;
+}
 
-.logo-container {
+.cover-photo {
+    transition: background-image 0.8s ease-in-out;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.cover-photo:after {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.32) 0%, transparent 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52000000', endColorstr='#00000000',GradientType=0 );
+    content: '';
+    position: absolute;
+    height: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding-bottom: 300px;
+}
+
+.page-content {
+    padding: 2em;
+}
+
+.styled-tabs .nav {
     text-align: center;
-    margin-bottom: 40px;
 }
 
-.view-container {
+.styled-tabs .nav-item {
+    position: relative;
+    float: none;
+    display: inline-block;
+    margin-left: 3.5rem !important;
+    margin-right: 3.5rem !important;
+    margin-bottom: 0 !important;
+}
+
+.styled-tabs .nav-item a {
     margin: 0 auto;
-    display: table;
+    padding: 0;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: #000;
 }
 
-/*
- * Tablet size (and up) styles
- * The elements are positioned next to one another
- */
-@media (min-width: 48em) {
-    /* Right align the logo */
-    .logo-container {
-        text-align: right;
-        margin-bottom: 0;
-    }
+.styled-tabs .nav-item a.active {
+    background: none;
+}
 
-    /* Left align the view */
-    .view-container {
-        margin: 0;
-        display: initial;
-    }
+.styled-tabs .nav-item a:hover {
+    background: transparent;
+}
+
+.styled-tabs ul {
+    display: flex;
+    justify-content: center;
+}
+
+.styled-tabs .nav-tabs {
+    border: none;
+    position: relative;
+}
+
+.styled-tabs .tab-icon {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    border-radius: 50px;
+    background: #fff;
+    border: 1px solid #000;
+    z-index: 2;
+    text-align: center;
+}
+
+.styled-tabs .tab-icon i {
+    color: #000;
+}
+
+.styled-tabs .tab-icon:hover {
+    color: #000;
+    border: 1px solid #333;
+}
+
+.styled-tabs .active .tab-icon {
+    background: #000;
+}
+
+.styled-tabs .tab-label {
+    display: block;
+    padding-bottom: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    font-size: larger;
+}
+
+.styled-tabs .tab-line {
+    position: absolute;
+    margin: 0 auto;
+    top: 5.5em;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    left:0;
+    right:0;
+}
+
+.styled-tabs .tab-content {
+    padding-top: 1em;
+    margin-top: 1em;
+}
+
+.separator-line {
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    width: 50%;
+    display: block;
+    margin: 2em auto;
+}
+
+.coming-soon {
+    font-size: larger;
+    text-align: center;
 }

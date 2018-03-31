@@ -1,9 +1,9 @@
-.rsvp-cover-photo {
+.our-entourage-cover-photo {
     background-image: url("/components/home/home-cover-photo.jpg");
     height: 300px;
 }
 
-.rsvp-content {
+.our-entourage-content {
     position: absolute;
     top: 300px;
     width: 100%;
