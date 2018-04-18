@@ -3,6 +3,11 @@
 var app = require('angular').module('nomorekiddingaround.controllers', ['ngRoute']);
 
 app.controller(
+    'NavController',
+    ['$route', require('./nav/nav.js')]
+);
+
+app.controller(
     'HomeController',
     require('./home/home.js')
 );

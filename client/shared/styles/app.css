@@ -13,9 +13,14 @@ body {
     color: #ffffff;
     margin: 0 15px;
     text-transform: uppercase;
+    /* transparent border so that these are the same size as when .nav-active applies a visible border */
+    border: 1px solid transparent;
 }
 .site-header a:hover {
     text-decoration: underline;
+}
+.site-header a.nav-active {
+    border: 1px solid #fff;
 }
 
 .cover-photo {

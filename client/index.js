@@ -12,7 +12,8 @@ require('angular').module(
                 '/',
                 {
                     templateUrl: 'components/home/home.html',
-                    css: 'components/home/home.css'
+                    css: 'components/home/home.css',
+                    activePage: 'home'
                 }
             );
 
@@ -20,7 +21,8 @@ require('angular').module(
                 '/our-story',
                 {
                     templateUrl: 'components/our-story/our-story.html',
-                    css: 'components/our-story/our-story.css'
+                    css: 'components/our-story/our-story.css',
+                    activePage: 'our-story'
                 }
             );
 
@@ -28,7 +30,8 @@ require('angular').module(
                 '/our-entourage',
                 {
                     templateUrl: 'components/our-entourage/our-entourage.html',
-                    css: 'components/our-entourage/our-entourage.css'
+                    css: 'components/our-entourage/our-entourage.css',
+                    activePage: 'our-entourage'
                 }
             );
 
@@ -36,7 +39,8 @@ require('angular').module(
                 '/the-wedding',
                 {
                     templateUrl: 'components/the-wedding/the-wedding.html',
-                    css: 'components/the-wedding/the-wedding.css'
+                    css: 'components/the-wedding/the-wedding.css',
+                    activePage: 'the-wedding'
                 }
             );
 
@@ -44,7 +48,8 @@ require('angular').module(
                 '/travel-and-lodging',
                 {
                     templateUrl: 'components/travel/travel.html',
-                    css: 'components/travel/travel.css'
+                    css: 'components/travel/travel.css',
+                    activePage: 'travel-and-lodging'
                 }
             );
 
@@ -52,7 +57,8 @@ require('angular').module(
                 '/things-to-do',
                 {
                     templateUrl: 'components/things-to-do/things-to-do.html',
-                    css: 'components/things-to-do/things-to-do.css'
+                    css: 'components/things-to-do/things-to-do.css',
+                    activePage: 'things-to-do'
                 }
             );
 
@@ -60,7 +66,8 @@ require('angular').module(
                 '/registry',
                 {
                     templateUrl: 'components/registry/registry.html',
-                    css: 'components/registry/registry.css'
+                    css: 'components/registry/registry.css',
+                    activePage: 'registry'
                 }
             );
 
@@ -68,7 +75,8 @@ require('angular').module(
                 '/rsvp',
                 {
                     templateUrl: 'components/rsvp/rsvp.html',
-                    css: 'components/rsvp/rsvp.css'
+                    css: 'components/rsvp/rsvp.css',
+                    activePage: 'rsvp'
                 }
             );
 
@@ -76,7 +84,8 @@ require('angular').module(
                 '/rsvp-list',
                 {
                     templateUrl: 'components/rsvp-list/rsvp-list.html',
-                    css: 'components/rsvp-list/rsvp-list.css'
+                    css: 'components/rsvp-list/rsvp-list.css',
+                    activePage: 'rsvp-list'
                 }
             );
 
