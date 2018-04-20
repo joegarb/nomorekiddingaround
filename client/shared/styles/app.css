@@ -44,6 +44,7 @@ a:hover {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-color: #000;
     z-index: -1;
     position: absolute;
     top: 0;

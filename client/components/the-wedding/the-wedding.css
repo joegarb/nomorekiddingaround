@@ -7,7 +7,12 @@
     position: absolute;
     top: 300px;
 }
-@media (min-width: 30em) {
+@media (min-width: 600px) {
+    .the-wedding-content {
+        width: 70%;
+    }
+}
+@media (min-width: 1200px) {
     .the-wedding-content {
         width: 50%;
     }
@@ -26,7 +31,7 @@
     margin-right: 2.5% !important;
     width: 45%;
 }
-@media (min-width: 30em) {
+@media (min-width: 900px) {
     .styled-tabs .nav-item {
         margin-left: 2.5rem !important;
         margin-right: 2.5rem !important;
@@ -115,7 +120,7 @@
 .styled-tabs .tab-line {
     top: 9.5em;
 }
-@media (min-width: 30em) {
+@media (min-width: 900px) {
     .styled-tabs .tab-line {
         display: block;
         top: 7.8em;
@@ -128,4 +133,19 @@
 .styled-tabs .tab-label-heading {
     font-weight: bold;
     font-size: larger;
+    height: 2.9em;
+}
+.styled-tabs .tab-label-subheading {
+    height: 3em;
+}
+@media (min-width: 900px) {
+    .styled-tabs .tab-label-heading,
+    .styled-tabs .tab-label-subheading {
+        height: initial;
+    }
+}
+@media (min-width: 1200px) {
+    .styled-tabs .tab-label-heading {
+        white-space: nowrap;
+    }
 }
