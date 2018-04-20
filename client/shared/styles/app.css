@@ -2,6 +2,20 @@ body {
     font-family: athelas, serif;
     font-style: normal;
     font-weight: 400;
+    text-align: justify;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: darkgreen;
+}
+a:link {
+    text-decoration: underline;
+}
+a:hover {
+    text-decoration: none;
 }
 
 .site-header {
@@ -13,6 +27,7 @@ body {
     color: #ffffff;
     margin: 0 15px;
     text-transform: uppercase;
+    text-decoration: none;
     /* transparent border so that these are the same size as when .nav-active applies a visible border */
     border: 1px solid transparent;
 }
@@ -52,105 +67,19 @@ body {
     padding: 2em;
 }
 
-.styled-tabs .nav {
-    text-align: center;
-}
-
-.styled-tabs .nav-item {
-    position: relative;
-    float: none;
-    display: inline-block;
-    margin-left: 2.5rem !important;
-    margin-right: 2.5rem !important;
-    margin-bottom: 0 !important;
-}
-
-.styled-tabs .nav-item a {
-    margin: 0 auto;
-    padding: 0;
-    position: relative;
-    outline: 0;
-    border: 0;
-    color: #000;
-}
-
-.styled-tabs .nav-item a.active {
-    background: none;
-}
-
-.styled-tabs .nav-item a:hover {
-    background: transparent;
-}
-
-.styled-tabs ul {
-    display: flex;
-    justify-content: center;
-}
-
-.styled-tabs .nav-tabs {
-    border: none;
-    position: relative;
-}
-
-.styled-tabs .tab-icon {
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    display: inline-block;
-    border-radius: 50px;
-    background: #fff;
-    border: 1px solid #000;
-    z-index: 2;
-    text-align: center;
-}
-
-.styled-tabs .tab-icon i {
-    color: #000;
-}
-
-.styled-tabs .tab-icon:hover {
-    color: #000;
-    border: 1px solid #333;
-}
-
-.styled-tabs .active .tab-icon {
-    background: #000;
-}
-
-.styled-tabs .tab-label {
-    display: block;
-    padding-bottom: 1em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: center;
-    font-size: larger;
-}
-
-.styled-tabs .tab-line {
-    position: absolute;
-    margin: 0 auto;
-    top: 5.5em;
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-    left:0;
-    right:0;
-}
-
-.styled-tabs .tab-content {
-    margin-top: 2em;
-}
-
 .separator-line {
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-    width: 50%;
     display: block;
     margin: 2em auto;
 }
 
-.coming-soon {
-    font-size: larger;
+.page-content-heading {
     text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.row > div {
+    margin-bottom: 1em;
 }

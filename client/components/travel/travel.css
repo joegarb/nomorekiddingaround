@@ -7,8 +7,17 @@
     position: absolute;
     top: 300px;
 }
+@media (min-width: 30em) {
+    .travel-content {
+        width: 85%;
+    }
+}
 
 .travel-type {
-    font-size: larger;
     text-align: center;
+}
+
+.travel .row > div {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
 }

@@ -7,21 +7,16 @@
     position: absolute;
     top: 300px;
 }
-
-.registry-sites {
-    margin: 0;
-}
-@media (min-width: 48em) {
-    /* A bit of space to either side of the bulleted list on tablets and larger */
-    .registry-sites {
-        margin: 0 2em;
+@media (min-width: 30em) {
+    .registry-content {
+        width: 50%;
     }
+}
+
+.registry-heading {
+    font-weight: bold;
 }
 
 .registry-sites > li {
     margin-bottom: 1em;
-}
-
-.registry-site-name {
-    font-size: larger;
 }

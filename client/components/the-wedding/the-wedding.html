@@ -1,4 +1,4 @@
-<div ng-controller="TheWeddingController as vm" class="page the-wedding">
+<div ng-controller="TheWeddingController as vm" class="page the-wedding d-flex justify-content-center">
     <div class="cover-photo the-wedding-cover-photo"></div>
     <div class="page-content the-wedding-content">
         <div class="styled-tabs">
@@ -6,14 +6,31 @@
             <uib-tabset>
                 <uib-tab>
                     <uib-tab-heading>
-                        <span class="tab-label">Wedding Ceremony</span>
+                        <div class="tab-label">
+                            <div class="tab-label-heading">
+                                Wedding Ceremony
+                            </div>
+                            <div class="tab-label-subheading">
+                                Sunday, November 11
+                                <br/>4:00 PM
+                            </div>
+                        </div>
                         <span class="tab-icon"></span>
                     </uib-tab-heading>
-                    <div>
-                        <div class="d-flex">
+                    <div class="row">
+                        <div class="col-sm text-center">
+                            <img src="components/the-wedding/trinity.jpg" style="width:250px;" alt="Trinity United Methodist Church" />
+                        </div>
+                        <div class="col-sm">
+                            <p>
+                                We invite all of you who have brought love, laughter, and support into our lives to join us in a celebration of our love as we exchange our vows with each other in the presence of the Lord.
+                            </p>
+                            Come as you are, but cocktail / semi-formal attire is suggested.
+                        </div>
+                        <div class="col-sm d-flex">
                             <div class="mx-auto">
                                 <div class="row">
-                                    <div class="col-3 text-right font-weight-bold">
+                                    <div class="col-3 text-right">
                                         Where:
                                     </div>
                                     <div class="col-9">
@@ -21,7 +38,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-3 text-right font-weight-bold">
+                                    <div class="col-3 text-right">
                                         When:
                                     </div>
                                     <div class="col-9">
@@ -33,25 +50,33 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="text-center">
-                            We invite all of you who have brought love, laughter, and support into our lives to join us in a celebration of our love as we exchange our vows with each other in the presence of the Lord.
-                        </p>
-                        <p class="text-center">
-                            Come as you are, but cocktail / semi-formal attire is suggested.
-                        </p>
                     </div>
                 </uib-tab>
 
                 <uib-tab>
                     <uib-tab-heading>
-                        <span class="tab-label">Cocktail Hour & Reception</span>
+                        <span class="tab-label">
+                            <div class="tab-label-heading">
+                                Cocktail Hour & Reception
+                            </div>
+                            <div class="tab-label-subheading">
+                                Sunday, November 11
+                                <br/>5:30 PM
+                            </div>
+                        </span>
                         <span class="tab-icon"></span>
                     </uib-tab-heading>
-                    <div>
-                        <div class="d-flex">
+                    <div class="row">
+                        <div class="col-sm text-center">
+                            <img src="components/the-wedding/old-exchange.jpg" style="width:250px; height:200px;" alt="The Old Exchange & Provost Dungeon" />
+                        </div>
+                        <div class="col-sm">
+                            Enjoy food and drinks courtesy of the newlyweds while they take photos following the ceremony. Dinner will be ready upstairs at 6pm, but there's no rush! Feel free to mingle, eat, and dance to your heart's content!
+                        </div>
+                        <div class="col-sm d-flex">
                             <div class="mx-auto">
                                 <div class="row">
-                                    <div class="col-3 text-right font-weight-bold">
+                                    <div class="col-3 text-right">
                                         Where:
                                     </div>
                                     <div class="col-9">
@@ -59,7 +84,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-3 text-right font-weight-bold">
+                                    <div class="col-3 text-right">
                                         When:
                                     </div>
                                     <div class="col-9">
@@ -71,9 +96,6 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="text-center">
-                            Enjoy food and drinks courtesy of the newlyweds while they take photos following the ceremony. Dinner will be ready upstairs at 6pm, but there's no rush! Feel free to mingle, eat, and dance to your heart's content!
-                        </p>
                     </div>
                 </uib-tab>
             </uib-tabset>

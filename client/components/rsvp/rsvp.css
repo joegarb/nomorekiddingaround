@@ -6,5 +6,9 @@
 .rsvp-content {
     position: absolute;
     top: 300px;
-    width: 100%;
+}
+@media (min-width: 30em) {
+    .rsvp-content {
+        width: 50%;
+    }
 }
