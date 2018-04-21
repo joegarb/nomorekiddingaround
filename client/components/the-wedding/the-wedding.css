@@ -118,12 +118,17 @@
 
 /* Reposition the line that the tab circles sit on for smaller screens where they break onto separate lines */
 .styled-tabs .tab-line {
-    top: 9.5em;
+    top: 8.5em;
+}
+@media (min-width: 600px) {
+    .styled-tabs .tab-line {
+        top: 9.5em;
+    }
 }
 @media (min-width: 900px) {
     .styled-tabs .tab-line {
         display: block;
-        top: 7.8em;
+        top: 6.3em;
     }
     .styled-tabs .nav-tabs {
         flex-wrap: nowrap;
@@ -132,16 +137,45 @@
 
 .styled-tabs .tab-label-heading {
     font-weight: bold;
-    font-size: larger;
     height: 2.9em;
 }
+@media (min-width: 600px) {
+    .styled-tabs .tab-label-heading {
+        font-size: larger;
+    }
+}
 .styled-tabs .tab-label-subheading {
+    font-size: smaller;
+
+    /* Maximum two lines with an ellipsis if the text exceeds that.
+   https://stackoverflow.com/questions/3922739/limit-text-length-to-n-lines-using-css */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-height: 1.5em; /* fallback */
+    max-height: 3em; /* fallback */
     height: 3em;
+}
+@media (min-width: 600px) {
+    .styled-tabs .tab-label-subheading {
+        font-size: initial;
+    }
 }
 @media (min-width: 900px) {
     .styled-tabs .tab-label-heading,
     .styled-tabs .tab-label-subheading {
-        height: initial;
+        /* Maximum one line with an ellipsis if the text exceeds that. */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1; /* number of lines to show */
+        line-height: 1.5em; /* fallback */
+        max-height: 1.5em; /* fallback */
+        height: 1.5em;
+        white-space: nowrap;
     }
 }
 @media (min-width: 1200px) {
