@@ -52,3 +52,8 @@ app.controller(
     'TravelController',
     require('./travel/travel.js')
 );
+
+app.controller(
+    'CreditsController',
+    require('./credits/credits.js')
+);

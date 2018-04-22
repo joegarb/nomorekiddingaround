@@ -1,0 +1,14 @@
+.credits-content {
+    position: absolute;
+    top: 300px;
+}
+@media (min-width: 600px) {
+    .credits-content {
+        width: 70%;
+    }
+}
+@media (min-width: 1200px) {
+    .credits-content {
+        width: 50%;
+    }
+}

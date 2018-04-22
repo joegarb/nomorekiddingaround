@@ -72,6 +72,15 @@ require('angular').module(
             );
 
             $routeProvider.when(
+                '/credits',
+                {
+                    templateUrl: 'components/credits/credits.html',
+                    css: 'components/credits/credits.css',
+                    activePage: 'credits'
+                }
+            );
+
+            $routeProvider.when(
                 '/rsvp',
                 {
                     templateUrl: 'components/rsvp/rsvp.html',
