@@ -1,8 +1,3 @@
-.rsvp-list-cover-photo {
-    background-image: url("/shared/images/cover-photo.jpg");
-    height: 300px;
-}
-
 .rsvp-list-content {
     position: absolute;
     top: 300px;

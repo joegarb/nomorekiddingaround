@@ -19,8 +19,6 @@ a:hover {
 }
 
 .site-header {
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
     padding: 15px 0;
 }
 .site-header a {
@@ -40,8 +38,6 @@ a:hover {
 
 .cover-photo {
     transition: background-image 0.8s ease-in-out;
-    background-size: cover;
-    background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-color: #000;
@@ -62,6 +58,17 @@ a:hover {
     width: 100%;
     z-index: 10;
     padding-bottom: 300px;
+}
+.primary-cover-photo {
+    background-image: url("/shared/images/cover-photo.jpg");
+    background-size: cover;
+    background-position: center;
+    bottom: 0;
+}
+.secondary-cover-photo {
+    background-image: url("/shared/images/cover-photo-2.jpg");
+    height: 300px;
+    background-position: center top;
 }
 
 .page-content {

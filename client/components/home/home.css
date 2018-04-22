@@ -4,11 +4,6 @@ body {
     overflow:hidden;
 }
 
-.home-cover-photo {
-    background-image: url("/shared/images/cover-photo.jpg");
-    bottom: 0;
-}
-
 @keyframes slideUpFromBottom {
     0% {
         transform: translateY(100%);
