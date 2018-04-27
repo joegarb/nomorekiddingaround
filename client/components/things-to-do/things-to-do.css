@@ -1,6 +1,7 @@
 .things-to-do-content {
     position: absolute;
     top: 300px;
+    width: 100%;
 }
 @media (min-width: 600px) {
     .things-to-do-content {

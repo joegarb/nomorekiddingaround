@@ -1,18 +1,18 @@
 <div ng-controller="RsvpController as vm" class="page rsvp d-flex justify-content-center">
     <div class="cover-photo secondary-cover-photo"></div>
-    <div class="page-content rsvp-content">
+    <div class="page-content rsvp-content text-left">
         <div class="row">
-            <form name="rsvpForm" class="mx-auto col-md-8 col-sm-10 col-xs-12" ng-submit="vm.submit(rsvpForm.$valid)" novalidate>
+            <form name="rsvpForm" class="mx-auto col-xs-12 col-sm-10 col-md-9" ng-submit="vm.submit(rsvpForm.$valid)" novalidate>
                 <div class="form-group row">
-                    <label for="rsvpName" class="col-md-4 col-form-label">Name</label>
-                    <div class="col-md-6">
+                    <label for="rsvpName" class="col-md-6 col-form-label">Name</label>
+                    <div class="col-md-6 col-lg-6">
                         <input type="text" class="form-control" id="rsvpName" placeholder="Name"
                                ng-model="vm.model.name" name="name" required>
                     </div>
                 </div>
                 <fieldset class="form-group">
                     <div class="row">
-                        <legend class="col-form-label col-md-4 pt-0">Will you be able to attend?</legend>
+                        <legend class="col-form-label col-md-6 pt-0">Will you be able to attend?</legend>
                         <div class="col-md-auto">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="isAttending" id="isAttending1" ng-model="vm.model.isAttending" ng-value="true" checked required>
@@ -30,8 +30,8 @@
                     </div>
                 </fieldset>
                 <div class="form-group row">
-                    <label for="numberOfGuests" class="col-md-4 col-form-label">Number of guests</label>
-                    <div class="col-md-2">
+                    <label for="numberOfGuests" class="col-md-6 col-form-label">Number of guests</label>
+                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
                         <input type="number" class="form-control" id="numberOfGuests"
                                ng-model="vm.model.numberOfGuests" ng-disabled="!vm.model.isAttending" ng-required="vm.model.isAttending" min="0" max="9" name="numberOfGuests" required>
                     </div>
