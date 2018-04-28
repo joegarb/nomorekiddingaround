@@ -1,6 +1,4 @@
 .the-wedding-content {
-    position: absolute;
-    top: 300px;
     width: 100%;
 }
 @media (min-width: 800px) {
@@ -17,6 +15,10 @@
     .the-wedding-content {
         width: 60%;
     }
+}
+
+.styled-tabs {
+    position: relative;
 }
 
 .styled-tabs .nav {
@@ -126,17 +128,17 @@
 
 /* Reposition the line that the tab circles sit on for smaller screens where they break onto separate lines */
 .styled-tabs .tab-line {
-    top: 8.5em;
+    top: 6.5em;
 }
 @media (min-width: 600px) {
     .styled-tabs .tab-line {
-        top: 9.5em;
+        top: 7.5em;
     }
 }
 @media (min-width: 900px) {
     .styled-tabs .tab-line {
         display: block;
-        top: 6.3em;
+        top: 4.3em;
     }
     .styled-tabs .nav-tabs {
         flex-wrap: nowrap;

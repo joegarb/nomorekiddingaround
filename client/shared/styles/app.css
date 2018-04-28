@@ -20,6 +20,11 @@ a:hover {
 
 .site-header {
     padding: 15px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
 }
 .site-header a {
     color: #ffffff;
@@ -42,10 +47,7 @@ a:hover {
     background-repeat: no-repeat;
     background-color: #000;
     z-index: -1;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
+    width: 100%;
 }
 .cover-photo:after {
     background: linear-gradient(to bottom, rgba(0,0,0,0.32) 0%, transparent 100%);
@@ -63,7 +65,11 @@ a:hover {
     background-image: url("/shared/images/cover-photo.jpg");
     background-size: cover;
     background-position: center;
+    position: absolute;
+    top: 0;
     bottom: 0;
+    left: 0;
+    right: 0;
 }
 .secondary-cover-photo {
     background-image: url("/shared/images/cover-photo-2.jpg");
