@@ -194,18 +194,18 @@
     }
 }
 
-#trinity-photo {
+#trinity-photo, #old-exchange-photo {
     width:250px;
     height:186px;
 }
 @media (min-width: 576px) {
-    #trinity-photo {
+    #trinity-photo, #old-exchange-photo {
         width:200px;
         height:149px;
     }
 }
 @media (min-width: 680px) {
-    #trinity-photo {
+    #trinity-photo, #old-exchange-photo {
         width:250px;
         height:186px;
     }
