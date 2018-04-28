@@ -1,21 +1,118 @@
 .our-story-content {
     width: 100%;
 }
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .our-story-content {
-        width: 70%;
+        width: 90%;
+    }
+}
+@media (min-width: 1000px) {
+    .our-story-content {
+        width: 80%;
+    }
+}
+
+.our-story .our-story-tab-content {
+    width: 100%;
+}
+@media (min-width: 600px) {
+    .our-story .our-story-tab-content {
+        width: 90%;
     }
 }
 @media (min-width: 1200px) {
-    .our-story-content {
-        width: 50%;
+    .our-story .our-story-tab-content {
+        width: 80%;
     }
 }
 
-.our-story-timeline-heading {
-    font-style: italic;
+/* Reposition the line that the tab circles sit on for smaller screens where they break onto separate lines */
+.our-story .styled-tabs .tab-line {
+    top: 5.6em;
+    left: -1.5em;
+    right: -1.5em;
+}
+@media (min-width: 600px) {
+    .our-story .styled-tabs .tab-line {
+        top: 4.7em;
+        left: 0;
+        right: 0;
+    }
+}
+@media (min-width: 900px) {
+    .our-story .styled-tabs .tab-line {
+        display: block;
+        top: 2.9em;
+    }
+    .our-story .styled-tabs .nav-tabs {
+        flex-wrap: nowrap;
+    }
 }
 
-.our-story-timeline-content {
-    margin-left: 2em;
+.our-story .styled-tabs .nav-item {
+    margin-left: 1% !important;
+    margin-right: 1% !important;
+    width: 23%;
+}
+@media (min-width: 900px) {
+    .our-story .styled-tabs .nav-item {
+        margin-left: 1.2rem !important;
+        margin-right: 1.2rem !important;
+        width: initial;
+    }
+}
+
+.our-story .styled-tabs .tab-label-heading {
+    /* Maximum three lines with an ellipsis if the text exceeds that.
+    https://stackoverflow.com/questions/3922739/limit-text-length-to-n-lines-using-css */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-height: 1.5em; /* fallback */
+    max-height: 4.5em; /* fallback */
+    height: 4.5em;
+}
+@media (min-width: 600px) {
+    .our-story .styled-tabs .tab-label-heading {
+        /* Maximum two lines with an ellipsis if the text exceeds that.
+        https://stackoverflow.com/questions/3922739/limit-text-length-to-n-lines-using-css */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; /* number of lines to show */
+        line-height: 1.5em; /* fallback */
+        max-height: 3em; /* fallback */
+        height: 3em;
+    }
+}
+@media (min-width: 900px) {
+    .our-story .styled-tabs .tab-label-heading {
+        /* Maximum one line with an ellipsis if the text exceeds that. */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1; /* number of lines to show */
+        line-height: 1.5em; /* fallback */
+        max-height: 1.5em; /* fallback */
+        height: 1.5em;
+        white-space: nowrap;
+    }
+}
+@media (min-width: 1200px) {
+    .our-story .styled-tabs .tab-label-heading {
+        white-space: nowrap;
+    }
+}
+
+.our-story-inline-image {
+    display: block;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .our-story-inline-image {
+        display: initial;
+        margin: 0 1em !important;
+    }
 }
