@@ -97,3 +97,22 @@ a:hover {
 .row > div {
     margin-bottom: 1em;
 }
+
+.footer {
+    margin: 1em;
+    font-size: smaller;
+    color: gray;
+    text-align: center;
+}
+.footer a:link,
+.footer a:visited,
+.footer a:hover,
+.footer a:active {
+    color: gray;
+}
+.footer a:link {
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
