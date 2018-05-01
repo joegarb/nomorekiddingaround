@@ -91,7 +91,11 @@ a:hover {
 .page-content-heading {
     text-align: center;
     font-weight: bold;
-    font-size: larger;
+}
+@media (min-width: 600px) {
+    .page-content-heading {
+        font-size: larger;
+    }
 }
 
 .row > div {
