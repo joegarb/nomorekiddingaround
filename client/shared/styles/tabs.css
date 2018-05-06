@@ -31,14 +31,11 @@
     background: transparent;
 }
 
-.styled-tabs ul {
-    display: flex;
-    justify-content: center;
-}
-
 .styled-tabs .nav-tabs {
     border: none;
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .styled-tabs .tab-icon {

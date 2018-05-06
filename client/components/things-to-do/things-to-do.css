@@ -1,13 +1,135 @@
 .things-to-do-content {
     width: 100%;
 }
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .things-to-do-content {
-        width: 70%;
+        width: 90%;
+    }
+}
+@media (min-width: 1000px) {
+    .things-to-do-content {
+        width: 75%;
+    }
+}
+@media (min-width: 1400px) {
+    .things-to-do-content {
+        width: 60%;
+    }
+}
+
+.things-to-do .things-to-do-tab-content {
+    width: 100%;
+}
+@media (min-width: 600px) {
+    .things-to-do .things-to-do-tab-content {
+        width: 75%;
+    }
+}
+@media (min-width: 1400px) {
+    .things-to-do .things-to-do-tab-content {
+        width: 85%;
+    }
+}
+
+/* Reposition the line that the tab circles sit on for smaller screens where they break onto separate lines */
+.things-to-do .styled-tabs .tab-line {
+    top: 4.1em;
+    left: -1.5em;
+    right: -1.5em;
+}
+@media (min-width: 600px) {
+    .things-to-do .styled-tabs .tab-line {
+        top: 4.7em;
+        left: 0;
+        right: 0;
+    }
+}
+@media (min-width: 900px) {
+    .things-to-do .styled-tabs .tab-line {
+        display: block;
+        top: 2.9em;
+    }
+    .things-to-do .styled-tabs .nav-tabs {
+        flex-wrap: nowrap;
+    }
+}
+
+.things-to-do .styled-tabs .nav-item {
+    margin-left: 1% !important;
+    margin-right: 1% !important;
+}
+.things-to-do .styled-tabs .nav-item:nth-of-type(1) {
+    width: 14%;
+}
+.things-to-do .styled-tabs .nav-item:nth-of-type(2) {
+    width: 28%;
+}
+.things-to-do .styled-tabs .nav-item:nth-of-type(3) {
+    width: 27%;
+}
+.things-to-do .styled-tabs .nav-item:nth-of-type(4) {
+    width: 23%;
+}
+@media (min-width: 900px) {
+    .things-to-do .styled-tabs .nav-item {
+        margin-left: 1.2rem !important;
+        margin-right: 1.2rem !important;
+    }
+    .things-to-do .styled-tabs .nav-item:nth-of-type(1) {
+        width: initial;
+    }
+    .things-to-do .styled-tabs .nav-item:nth-of-type(2) {
+        width: initial;
+    }
+    .things-to-do .styled-tabs .nav-item:nth-of-type(3) {
+        width: initial;
+    }
+    .things-to-do .styled-tabs .nav-item:nth-of-type(4) {
+        width: initial;
+    }
+}
+
+.things-to-do .styled-tabs .tab-label-heading {
+    /* Maximum two lines with an ellipsis if the text exceeds that.
+    https://stackoverflow.com/questions/3922739/limit-text-length-to-n-lines-using-css */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-height: 1.5em; /* fallback */
+    max-height: 3em; /* fallback */
+    height: 3em;
+}
+@media (min-width: 900px) {
+    .things-to-do .styled-tabs .tab-label-heading {
+        /* Maximum one line with an ellipsis if the text exceeds that. */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1; /* number of lines to show */
+        line-height: 1.5em; /* fallback */
+        max-height: 1.5em; /* fallback */
+        height: 1.5em;
+        white-space: nowrap;
     }
 }
 @media (min-width: 1200px) {
-    .things-to-do-content {
-        width: 50%;
+    .things-to-do .styled-tabs .tab-label-heading {
+        white-space: nowrap;
     }
+}
+
+.things-to-do-tab-content > ul {
+    padding-left: 1em;
+}
+@media (min-width: 600px) {
+    .things-to-do-tab-content > ul {
+        padding-left: initial;
+    }
+}
+
+.things-to-do .list-item-heading {
+    font-weight: bold;
 }
