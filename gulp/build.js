@@ -6,13 +6,14 @@ const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const htmlmin = require('gulp-htmlmin');
 const cleanCSS = require('gulp-clean-css');
+const sass = require('gulp-sass');
 const inlineSource = require('gulp-inline-source');
 const gulpif = require('gulp-if');
 const rev = require('gulp-rev');
 const revReplace = require('gulp-rev-replace');
 const gutil = require('gulp-util');
 
-gulp.task('build', ['clean'], () => {
+gulp.task('build', [], () => {
     return Promise.all([
         new Promise((resolve, reject) => {
             gutil.log('Building javascript');
@@ -49,25 +50,10 @@ gulp.task('build', ['clean'], () => {
                 .on('end', resolve);
         }),
         new Promise((resolve, reject) => {
-            gutil.log('Minifying component CSS');
+            gutil.log('Processing sass');
             gulp
-                .src('client/components/**/*.css')
-                .pipe(cleanCSS({compatibility: 'ie8'}))
-                .pipe(gulp.dest('dist/components'))
-                .on('end', resolve);
-        }),
-        new Promise((resolve, reject) => {
-            gutil.log('Minifying unbundled shared CSS');
-            gulp
-                .src('client/shared/styles/unbundled/*.css')
-                .pipe(cleanCSS({compatibility: 'ie8'}))
-                .pipe(gulp.dest('dist/shared/styles/unbundled'))
-                .on('end', resolve);
-        }),
-        new Promise((resolve, reject) => {
-            gutil.log('Minifying/bundling shared CSS');
-            gulp
-                .src('client/shared/styles/*.css')
+                .src('client/**/*.scss')
+                .pipe(sass({outputStyle: 'expanded', indentWidth: 4}))
                 .pipe(cleanCSS({compatibility: 'ie8'}))
                 .pipe(concat('bundle.css'))
                 .pipe(gulp.dest('dist/shared/styles'))

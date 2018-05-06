@@ -1,0 +1,15 @@
+.our-entourage {
+    .our-entourage-content {
+        width: 100%;
+    }
+    @media (min-width: 600px) {
+        .our-entourage-content {
+            width: 70%;
+        }
+    }
+    @media (min-width: 1200px) {
+        .our-entourage-content {
+            width: 50%;
+        }
+    }
+}

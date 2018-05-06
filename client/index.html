@@ -13,10 +13,18 @@
     <link rel="stylesheet" href="shared/styles/bundle.css" inline>
     <script src="bundle.js" inline></script>
 </head>
+<body ng-controller="MainController as main" ng-class="{'overflow-hidden': main.getActivePage() === 'home'}">
 
-<body>
-
-<ng-include src="'components/nav/nav.html'"></ng-include>
+<nav class="site-header nav nav-pills justify-content-center">
+    <a ng-class="{'nav-active': main.getActivePage() === 'home'}" class="nav-link" href="/">Home</a>
+    <a ng-class="{'nav-active': main.getActivePage() === 'our-story'}" class="nav-link" href="/our-story">Our Story</a>
+    <a ng-class="{'nav-active': main.getActivePage() === 'our-entourage'}" class="nav-link" href="/our-entourage">Our Entourage</a>
+    <a ng-class="{'nav-active': main.getActivePage() === 'the-wedding'}" class="nav-link" href="/the-wedding">The Wedding</a>
+    <a ng-class="{'nav-active': main.getActivePage() === 'travel-and-lodging'}" class="nav-link" href="/travel-and-lodging">Travel & Lodging</a>
+    <a ng-class="{'nav-active': main.getActivePage() === 'things-to-do'}" class="nav-link" href="/things-to-do">Things To Do</a>
+    <a ng-class="{'nav-active': main.getActivePage() === 'registry'}" class="nav-link" href="/registry">Registry</a>
+    <a ng-class="{'nav-active': main.getActivePage() === 'credits'}" class="nav-link" href="/credits">Credits</a>
+</nav>
 
 <ng-view></ng-view>
 

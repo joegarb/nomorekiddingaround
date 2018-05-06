@@ -3,6 +3,7 @@
 const gulp = require('gulp');
 const browserify = require('gulp-browserify');
 const concat = require('gulp-concat');
+const sass = require('gulp-sass');
 const gutil = require('gulp-util');
 
 // Similar to the production build task, but without a few things like minification
@@ -32,23 +33,10 @@ gulp.task('build-dev', ['clean', 'lint'], () => {
                 .on('end', resolve);
         }),
         new Promise((resolve, reject) => {
-            gutil.log('Copying component CSS');
+            gutil.log('Processing sass');
             gulp
-                .src('client/components/**/*.css')
-                .pipe(gulp.dest('dist/components'))
-                .on('end', resolve);
-        }),
-        new Promise((resolve, reject) => {
-            gutil.log('Copying unbundled shared CSS');
-            gulp
-                .src('client/shared/styles/unbundled/*.css')
-                .pipe(gulp.dest('dist/shared/styles/unbundled'))
-                .on('end', resolve);
-        }),
-        new Promise((resolve, reject) => {
-            gutil.log('Bundling shared CSS');
-            gulp
-                .src('client/shared/styles/*.css')
+                .src('client/**/*.scss')
+                .pipe(sass({outputStyle: 'expanded', indentWidth: 4}))
                 .pipe(concat('bundle.css'))
                 .pipe(gulp.dest('dist/shared/styles'))
                 .on('end', resolve);
