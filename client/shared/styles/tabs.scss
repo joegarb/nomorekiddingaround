@@ -20,11 +20,9 @@
             color: #212529;
             text-decoration: none;
 
-            &.active {
-                background: none;
-            }
-            &:hover {
-                background: transparent;
+            &:hover,
+            &:focus {
+                text-decoration: underline;
             }
         }
     }
@@ -47,7 +45,8 @@
         z-index: 2;
         text-align: center;
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: #212529;
             background: #212529;
         }
@@ -65,10 +64,6 @@
         display: block;
         padding-bottom: .5em;
         text-align: center;
-
-        &:hover {
-            text-decoration: underline;
-        }
     }
 
     .tab-line {

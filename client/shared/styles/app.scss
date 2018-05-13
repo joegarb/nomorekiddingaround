@@ -12,16 +12,17 @@ body {
 }
 
 a {
+    outline: 0;
+    text-decoration: underline;
+
     &:link,
     &:visited,
     &:hover,
     &:active {
         color: darkgreen;
     }
-    &:link {
-        text-decoration: underline;
-    }
-    &:hover {
+    &:hover,
+    &:focus {
         text-decoration: none;
     }
 }
@@ -42,7 +43,8 @@ a {
         /* transparent border so that these are the same size as when .nav-active applies a visible border */
         border: 1px solid transparent;
 
-        &:hover {
+        &:hover,
+        &:focus {
             text-decoration: underline;
         }
 
@@ -121,16 +123,16 @@ a {
     text-align: center;
 
     a {
+        text-decoration: none;
+
         &:link,
         &:visited,
         &:hover,
         &:active {
             color: gray;
         }
-        &:link {
-            text-decoration: none;
-        }
-        &:hover {
+        &:hover,
+        &:focus {
             text-decoration: underline;
         }
     }
