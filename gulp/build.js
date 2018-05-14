@@ -68,8 +68,8 @@ gulp.task('build', [], () => {
         return new Promise((resolve, reject) => {
             gutil.log('Inlining js/css/images into the html');
             gulp
-                .src('dist/*.html')
-                .pipe(inlineSource())
+                .src('dist/**/*.html')
+                .pipe(inlineSource({rootpath: path.resolve('dist')}))
                 .pipe(gulp.dest('dist'))
                 .on('end', () => {
 
