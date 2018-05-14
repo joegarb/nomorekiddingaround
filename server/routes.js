@@ -39,7 +39,7 @@ router.post('/api/rsvp', (req, res) => {
     });
 });
 
-router.get('/*', function (req, res) {
+router.get('/*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '..', 'dist', 'index.html'));
 });
 

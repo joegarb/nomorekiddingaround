@@ -11,11 +11,16 @@ const path = require('path');
 
 app.enable('trust proxy');
 
-// Redirect www to non-www
 app.use((req, res, next) => {
     if (req.headers.host.slice(0, 4) === 'www.') {
+        // Redirect www to non-www
         var newHost = req.headers.host.slice(4);
         return res.redirect(301, req.protocol + '://' + newHost + req.originalUrl);
+    }
+    if (req.url.indexOf('-rev-') !== -1) {
+        // Let files with hashes in the names be cached for a long time
+        res.set('Cache-Control', 'public, max-age=31536000');
+        res.set('Expires', new Date(Date.now() + 31536000000).toUTCString());
     }
     next();
 });
