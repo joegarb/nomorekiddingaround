@@ -4,13 +4,13 @@ const gulp = require('gulp');
 const browserify = require('gulp-browserify');
 const concat = require('gulp-concat');
 const sass = require('gulp-sass');
-const gutil = require('gulp-util');
+const log = require('fancy-log');
 
 // Similar to the production build task, but without a few things like minification
 gulp.task('build-dev', ['clean', 'lint'], () => {
     return Promise.all([
         new Promise((resolve, reject) => {
-            gutil.log('Building javascript');
+            log('Building javascript');
             gulp
                 .src('client/index.js')
                 .pipe(browserify())
@@ -19,21 +19,21 @@ gulp.task('build-dev', ['clean', 'lint'], () => {
                 .on('end', resolve);
         }),
         new Promise((resolve, reject) => {
-            gutil.log('Copying images');
+            log('Copying images');
             gulp
                 .src('client/**/*.{png,jpg}')
                 .pipe(gulp.dest('dist'))
                 .on('end', resolve);
         }),
         new Promise((resolve, reject) => {
-            gutil.log('Copying html');
+            log('Copying html');
             gulp
                 .src('client/**/*.html')
                 .pipe(gulp.dest('dist'))
                 .on('end', resolve);
         }),
         new Promise((resolve, reject) => {
-            gutil.log('Processing sass');
+            log('Processing sass');
             gulp
                 .src('client/**/*.scss')
                 .pipe(sass({outputStyle: 'expanded', indentWidth: 4}))

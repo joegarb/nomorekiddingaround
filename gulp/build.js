@@ -16,12 +16,13 @@ const revOutdated = require('gulp-rev-outdated');
 const rimraf = require('rimraf');
 const path = require('path');
 const through = require('through2');
-const gutil = require('gulp-util');
+const log = require('fancy-log');
+const PluginError = require('plugin-error');
 
 gulp.task('build', [], () => {
     return Promise.all([
         new Promise((resolve, reject) => {
-            gutil.log('Building javascript');
+            log('Building javascript');
             gulp
                 .src('client/index.js')
                 .pipe(browserify())
@@ -31,7 +32,7 @@ gulp.task('build', [], () => {
                 .on('end', resolve);
         }),
         new Promise((resolve, reject) => {
-            gutil.log('Copying sitemap.xml and robots.txt');
+            log('Copying sitemap.xml and robots.txt');
             gulp
                 .src([
                     'client/*.xml',
@@ -40,14 +41,14 @@ gulp.task('build', [], () => {
                 .on('end', resolve);
         }),
         new Promise((resolve, reject) => {
-            gutil.log('Copying images');
+            log('Copying images');
             gulp
                 .src('client/**/*.{png,jpg}')
                 .pipe(gulp.dest('dist'))
                 .on('end', resolve);
         }),
         new Promise((resolve, reject) => {
-            gutil.log('Minifying html');
+            log('Minifying html');
             gulp
                 .src('client/**/*.html')
                 .pipe(htmlmin({collapseWhitespace: true}))
@@ -55,7 +56,7 @@ gulp.task('build', [], () => {
                 .on('end', resolve);
         }),
         new Promise((resolve, reject) => {
-            gutil.log('Processing sass');
+            log('Processing sass');
             gulp
                 .src('client/**/*.scss')
                 .pipe(sass({outputStyle: 'expanded', indentWidth: 4}))
@@ -66,14 +67,14 @@ gulp.task('build', [], () => {
         })
     ]).then(() => {
         return new Promise((resolve, reject) => {
-            gutil.log('Inlining js/css/images into the html');
+            log('Inlining js/css/images into the html');
             gulp
                 .src('dist/**/*.html')
                 .pipe(inlineSource({rootpath: path.resolve('dist')}))
                 .pipe(gulp.dest('dist'))
                 .on('end', () => {
 
-                    gutil.log('Cleaning old versioned files');
+                    log('Cleaning old versioned files');
                     gulp
                         .src([
                             'dist/**/*.html',
@@ -85,7 +86,7 @@ gulp.task('build', [], () => {
                         .pipe(cleaner())
                         .on('finish', () => {
 
-                            gutil.log('Versioning modified files for cache busting');
+                            log('Versioning modified files for cache busting');
 
                             const indexHtmlFilter = filter(['**/*', '!**/index.html'], {restore: true});
                             const revFilter = filter(['**/*', '!**/*-rev-*'], {restore: true});
@@ -116,7 +117,7 @@ function cleaner() {
     return through.obj(function(file, enc, cb) {
         rimraf(path.resolve((file.cwd || process.cwd()), file.path), function(err) {
             if (err) {
-                this.emit('error', new gutil.PluginError('Cleanup old files', err));
+                this.emit('error', new PluginError('Cleanup old files', err));
             }
             this.push(file);
             cb();

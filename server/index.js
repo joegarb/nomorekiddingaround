@@ -14,7 +14,7 @@ app.enable('trust proxy');
 app.use((req, res, next) => {
     if (req.headers.host.slice(0, 4) === 'www.') {
         // Redirect www to non-www
-        var newHost = req.headers.host.slice(4);
+        let newHost = req.headers.host.slice(4);
         return res.redirect(301, req.protocol + '://' + newHost + req.originalUrl);
     }
     if (req.url.indexOf('-rev-') !== -1) {

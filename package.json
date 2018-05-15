@@ -33,6 +33,7 @@
     "browser-sync": "^2.23.6",
     "del": "^3.0.0",
     "eslint-config-google": "^0.9.1",
+    "fancy-log": "^1.3.2",
     "gulp": "^3.9.1",
     "gulp-browserify": "^0.5.1",
     "gulp-clean-css": "^3.9.2",
@@ -48,9 +49,9 @@
     "gulp-rev-rewrite": "^1.0.3",
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0",
-    "gulp-util": "^3.0.8",
     "nodemon": "^1.17.1",
     "path": "^0.12.7",
+    "plugin-error": "^1.0.1",
     "rimraf": "^2.6.2",
     "run-sequence": "^2.2.1",
     "through2": "^2.0.3"
