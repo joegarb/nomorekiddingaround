@@ -32,18 +32,9 @@ gulp.task('build', [], () => {
                 .on('end', resolve);
         }),
         new Promise((resolve, reject) => {
-            log('Copying sitemap.xml and robots.txt');
+            log('Copying assets');
             gulp
-                .src([
-                    'client/*.xml',
-                    'client/*.txt'])
-                .pipe(gulp.dest('dist'))
-                .on('end', resolve);
-        }),
-        new Promise((resolve, reject) => {
-            log('Copying images');
-            gulp
-                .src('client/**/*.{png,jpg}')
+                .src('client/**/*.{png,jpg,ico,svg,xml,txt,webmanifest}')
                 .pipe(gulp.dest('dist'))
                 .on('end', resolve);
         }),
