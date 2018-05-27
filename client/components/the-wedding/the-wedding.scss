@@ -20,17 +20,17 @@
 
     /* Reposition the line that the tab circles sit on for smaller screens where they break onto separate lines */
     .styled-tabs .tab-line {
-        top: 6.5em;
+        top: 6.7em;
     }
     @media (min-width: 600px) {
         .styled-tabs .tab-line {
-            top: 7.5em;
+            top: 7.25em;
         }
     }
     @media (min-width: 900px) {
         .styled-tabs .tab-line {
             display: block;
-            top: 4.3em;
+            top: 4.2em;
         }
         .styled-tabs .nav-tabs {
             flex-wrap: nowrap;
@@ -58,7 +58,7 @@
     }
 
     .styled-tabs .tab-label-subheading {
-        font-size: smaller;
+        font-size: .9em;
 
         /* Maximum two lines with an ellipsis if the text exceeds that.
         https://stackoverflow.com/questions/3922739/limit-text-length-to-n-lines-using-css */
