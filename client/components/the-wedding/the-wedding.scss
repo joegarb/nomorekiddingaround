@@ -53,7 +53,7 @@
         .styled-tabs .nav-item {
             margin-left: 2.5rem !important;
             margin-right: 2.5rem !important;
-            width: initial;
+            width: auto;
         }
     }
 
@@ -73,7 +73,7 @@
     }
     @media (min-width: 600px) {
         .styled-tabs .tab-label-subheading {
-            font-size: initial;
+            font-size: 1em;
         }
     }
     @media (min-width: 900px) {

@@ -59,7 +59,7 @@
         .styled-tabs .nav-item {
             margin-left: 1.2rem !important;
             margin-right: 1.2rem !important;
-            width: initial;
+            width: auto;
         }
     }
 
@@ -113,7 +113,7 @@
     }
     @media (min-width: 768px) {
         .our-story-inline-image {
-            display: initial;
+            display: inline-block;
             margin: 0 1em !important;
         }
     }

@@ -78,16 +78,16 @@
             margin-right: 1.2rem !important;
 
             &:nth-of-type(1) {
-                width: initial;
+                width: auto;
             }
             &:nth-of-type(2) {
-                width: initial;
+                width: auto;
             }
             &:nth-of-type(3) {
-                width: initial;
+                width: auto;
             }
             &:nth-of-type(4) {
-                width: initial;
+                width: auto;
             }
         }
     }
@@ -129,7 +129,7 @@
     }
     @media (min-width: 600px) {
         .things-to-do-tab-content > ul {
-            padding-left: initial;
+            padding-left: 0;
         }
     }
 
