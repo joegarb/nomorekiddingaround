@@ -127,11 +127,6 @@
     .things-to-do-tab-content > ul {
         padding-left: 1em;
     }
-    @media (min-width: 600px) {
-        .things-to-do-tab-content > ul {
-            padding-left: 0;
-        }
-    }
 
     .list-item-heading {
         font-weight: bold;
