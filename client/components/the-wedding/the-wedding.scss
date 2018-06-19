@@ -14,7 +14,7 @@
     }
     @media (min-width: 1200px) {
         .the-wedding-content {
-            width: 60%;
+            width: 65%;
         }
     }
 
@@ -98,6 +98,8 @@
     }
 
     #trinity-photo, #old-exchange-photo {
+        flex: none;
+
         width:250px;
         height:186px;
     }
@@ -112,5 +114,9 @@
             width:250px;
             height:186px;
         }
+    }
+
+    .where-when-column {
+        min-width: 11.25em;
     }
 }
