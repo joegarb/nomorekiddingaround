@@ -21,7 +21,7 @@ gulp.task('build-dev', ['clean', 'lint'], () => {
         new Promise((resolve, reject) => {
             log('Copying assets');
             gulp
-                .src('client/**/*.{png,jpg,ico,svg,xml,txt,webmanifest}')
+                .src('client/**/*.{png,jpg,ico,svg,xml,txt,webmanifest,js}')
                 .pipe(gulp.dest('dist'))
                 .on('end', resolve);
         }),

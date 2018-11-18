@@ -1,6 +1,7 @@
 {
     "name": "Allison & Joe",
     "short_name": "Allison & Joe",
+    "start_url": ".",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",

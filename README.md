@@ -1,6 +1,12 @@
 # nomorekiddingaround
 
-A wedding RSVP web app built on the AngularJS 1 MEAN stack
+A wedding RSVP web app built on the AngularJS MEAN stack
+
+Features:
+- Optimized for mobile and desktop
+- Progressive web app (works offline, and installable to mobile home screen)
+- Unlisted RSVP page (see /rsvp and /rsvp-list)
+- JSON API (see /api/rsvp)
 
 ---
 

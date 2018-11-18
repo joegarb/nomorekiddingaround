@@ -1,6 +1,6 @@
 {
   "name": "nomorekiddingaround",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/joegarb/nomorekiddingaround.git"
@@ -39,21 +39,15 @@
     "gulp-clean-css": "^3.9.2",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^4.0.2",
-    "gulp-filter": "^5.1.0",
     "gulp-htmlmin": "^4.0.0",
     "gulp-inline-source": "^3.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-rev": "^8.1.1",
-    "gulp-rev-format": "^1.0.4",
-    "gulp-rev-outdated": "^0.1.1",
-    "gulp-rev-rewrite": "^1.0.3",
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0",
     "nodemon": "^1.17.1",
     "path": "^0.12.7",
-    "plugin-error": "^1.0.1",
-    "rimraf": "^2.6.2",
     "run-sequence": "^2.2.1",
-    "through2": "^2.0.3"
+    "sw-precache": "^5.2.1",
+    "sw-toolbox": "^3.6.0"
   }
 }
