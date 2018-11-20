@@ -3,12 +3,14 @@
 const port = 8000;
 
 const express = require('express');
+const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const app = express();
 const morgan = require('morgan');
 const logger = require('./logger');
 const path = require('path');
 
+app.use(helmet());
 app.enable('trust proxy');
 
 app.use((req, res, next) => {
