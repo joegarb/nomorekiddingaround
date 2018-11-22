@@ -1,4 +1,4 @@
-# nomorekiddingaround ![Docker Automated build](https://img.shields.io/docker/automated/joegarb/nomorekiddingaround.svg)
+# nomorekiddingaround [![Docker Automated build](https://img.shields.io/docker/automated/joegarb/nomorekiddingaround.svg)](https://hub.docker.com/r/joegarb/nomorekiddingaround/)
 
 A wedding RSVP web app built on the AngularJS MEAN stack
 
