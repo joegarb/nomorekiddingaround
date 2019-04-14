@@ -18,7 +18,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr ng-repeat="rsvp in vm.list">
+                        <tr ng-repeat="rsvp in vm.list track by $index">
                             <td>{{rsvp.name}}</td>
                             <td>{{rsvp.isAttending}}</td>
                             <td>{{rsvp.numberOfGuests}}</td>
