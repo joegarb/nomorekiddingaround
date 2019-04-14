@@ -6,6 +6,7 @@ Features:
 - Optimized for mobile and desktop
 - Progressive web app (works offline, and installable to mobile home screen)
 - Unlisted RSVP page (see /rsvp and /rsvp-list)
+  - RSVP functionality is non-functional on the hosted site since it is currently using a serverless, static site deployment
 - JSON API (see /api/rsvp)
 
 ---
