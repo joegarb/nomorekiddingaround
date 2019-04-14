@@ -5,6 +5,7 @@ A wedding RSVP web app built on the AngularJS MEAN stack
 Features:
 - Optimized for mobile and desktop
 - Progressive web app (works offline, and installable to mobile home screen)
+  - Mostly disabled in the current deployment; to enable: add start_url to site.webmanifest, and uncomment service-worker-registration script in index.html
 - Unlisted RSVP page (see /rsvp and /rsvp-list)
   - RSVP functionality is non-functional on the hosted site since it is currently using a serverless, static site deployment
 - JSON API (see /api/rsvp)
