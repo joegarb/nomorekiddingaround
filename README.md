@@ -7,8 +7,9 @@ Features:
 - Progressive web app (works offline, and installable to mobile home screen)
   - Mostly disabled in the current deployment; to enable: add start_url to site.webmanifest, and uncomment service-worker-registration script in index.html
 - Unlisted RSVP page (see /rsvp and /rsvp-list)
-  - RSVP functionality is non-functional on the hosted site since it is currently using a serverless, static site deployment
+  - RSVP functionality is non-functional on the hosted instance since it is currently using a serverless, static site deployment
 - JSON API (see /api/rsvp)
+  - Unavailable on the hosted instance since it is currently using a serverless, static site deployment
 
 ---
 
